@@ -1,2 +1,2 @@
-# lisa-plugin-lumene-screen
-L.I.S.A. plugin to manage Lumene IR projector screen
+# lisa-plugin-ir
+L.I.S.A. plugin to manage IR commands
