@@ -6,10 +6,18 @@ module.exports = class IRDriver extends Driver {
 
   setDeviceValue(device, key, value) {
     if (device) {
-      return this.lisa.ir.send(device.privateData.remote, device.privateData.action)
+      let command = device.privateData.action
+      if (command.indexOf('key') === -1) {
+        command = 'KEY_' + command.trim().toUpperCase()
+      }
+      return this.lisa.ir.send(device.privateData.remote, command)
     }
     else {
-      return this.lisa.ir.send(key, value)
+      let command = value
+      if (command.indexOf('key') === -1) {
+        command = 'KEY_' + command.trim().toUpperCase()
+      }
+      return this.lisa.ir.send(key, command)
     }
   }
 }
