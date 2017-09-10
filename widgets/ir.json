@@ -1,0 +1,11 @@
+{
+  "type": "vbox",
+  "children": [
+    {
+      "type": "image-button",
+      "name": "command",
+      "mainIndicator": true,
+      "value": "/images/icons/pulse.svg"
+    }
+  ]
+}

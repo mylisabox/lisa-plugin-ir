@@ -1,0 +1,19 @@
+{
+  "name": "lisa-plugin-ir",
+  "main": "index.js",
+  "version": "0.0.1",
+  "scripts": {
+    "test": "eslint --fix . && mocha"
+  },
+  "eslintConfig": {
+    "extends": "trails"
+  },
+  "dependencies": {
+    "lisa-plugin": "^0.0.15"
+  },
+  "devDependencies": {
+    "eslint": "^4.0.0",
+    "eslint-config-trails": "^3.0.0",
+    "mocha": "^3.4.2"
+  }
+}
