@@ -13,6 +13,9 @@ module.exports = class IRPlugin extends Plugin {
       case "DEVICE_TURN_ON":
         return this.drivers['ir'].setDeviceValue(device)
       case "SEND_IR_COMMAND":
+        if (device) {
+          return this.drivers['ir'].setDeviceValue(device)
+        }
         return this.drivers['ir'].setDeviceValue(null, infos.fields.remote, infos.fields.action)
       default:
         return Promise.resolve()
