@@ -14,7 +14,7 @@ module.exports = class IRDriver extends Driver {
     }
     else {
       let command = value
-      if (command.indexOf('key') === -1) {
+      if (command && command.indexOf('key') === -1) {
         command = 'KEY_' + command.trim().toUpperCase()
       }
       return this.lisa.ir.send(key, command)
