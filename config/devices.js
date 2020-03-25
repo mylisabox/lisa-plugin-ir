@@ -20,27 +20,25 @@ module.exports = [
       'crossAxisAlignment': 3,
       'children': [
         {
-          controlType: 'textbox',
-          type: 'text',
-          name: 'remote',
-          label: {
-            en: 'Remote name',
-            fr: 'Nom de la télécommande'
-          },
-          required: true,
-          private: true
+          'type': 'text_field',
+          'id': 'remote',
+          'required': true,
+          'private': true,
+          'textInputAction': 6,
+          'decoration': {
+            'labelText': 'Remote name*',
+          }
         },
         {
-          controlType: 'textbox',
-          type: 'text',
-          name: 'action',
-          label: {
-            en: 'Remote command',
-            fr: 'Nom de la touche'
-          },
-          required: true,
-          private: true
-        }
+          'type': 'text_field',
+          'id': 'action',
+          'required': true,
+          'private': true,
+          'textInputAction': 2,
+          'decoration': {
+            'labelText': 'Remote command*',
+          }
+        },
       ],
     }
   }
