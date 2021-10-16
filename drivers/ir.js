@@ -1,9 +1,6 @@
-'use strict'
+import {Driver} from 'lisa-plugin'
 
-const Driver = require('lisa-plugin').Driver
-
-module.exports = class IRDriver extends Driver {
-
+export default class IRDriver extends Driver {
   setDeviceValue(device, key, value) {
     if (device) {
       let command = device.data.action
@@ -19,5 +16,9 @@ module.exports = class IRDriver extends Driver {
       }
       return this.lisa.ir.send(key, command)
     }
+  }
+
+  async triggerDevice(device) {
+    return this.setDeviceValue(device);
   }
 }
